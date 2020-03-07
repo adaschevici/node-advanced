@@ -34,5 +34,22 @@ theme = "learn"
   # Change default color scheme with a variant one. Can be "red", "blue", "green", "orange".
   themeVariant = "orange"
 
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
