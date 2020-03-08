@@ -40,7 +40,7 @@ theme = "learn"
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
-url = "https://github.com/matcornic/hugo-theme-learn"
+url = "https://github.com/adaschevici/torque"
 weight = 10
 
 [[menu.shortcuts]]
