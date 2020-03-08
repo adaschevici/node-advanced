@@ -7,6 +7,13 @@ draft: true
 
 #### What should the path be?
 
+{{% button href="https://getgrav.org/" icon="fas fa-download" %}}Get Grav with icon{{% /button %}}
+
+{{% notice note %}}
+The size of the logo will adapt automatically
+{{% /notice %}}
+
+
 ```javascript
 import React, { Component } from 'react'
 
