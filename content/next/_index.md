@@ -12,3 +12,4 @@ draft = true
 
 {{< lazy-image image="pages-chapter-2.png" lightbox=true />}}
 
+{{< google-slides token="1nFc4ARtR5oJ-BpIk33Py7Yvn-o5CbfXteODspFtpF90" >}}
