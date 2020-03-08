@@ -33,6 +33,7 @@ theme = "learn"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green", "orange".
   themeVariant = "orange"
+  logotype = "node"
 
 [[menu.shortcuts]] 
 name = "<i class='fab fa-github'></i> Github repo"
