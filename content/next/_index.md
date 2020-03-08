@@ -9,5 +9,6 @@ draft = true
 
 
 #### What should the path be?
-{{< lazy-image image="pages-chapter.png" />}}
+
+{{< lazy-image image="pages-chapter-2.png" />}}
 
