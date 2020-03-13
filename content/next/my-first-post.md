@@ -14,7 +14,7 @@ The size of the logo will adapt automatically
 {{% /notice %}}
 
 
-```javascript
+{{< highlight javascript "hl_lines=8 15-17" >}}
 import React, { Component } from 'react'
 
 import PropTypes from 'prop-types'
@@ -126,4 +126,4 @@ class BookList extends Component {
 }
 
 export default withStyles(styles)(BookList)
-```
+{{< / highlight >}}
