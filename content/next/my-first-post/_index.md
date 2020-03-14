@@ -7,6 +7,8 @@ draft: true
 
 #### What should the path be?
 
+{{< lazy-image image="pages-chapter-2.png" lightbox=true />}}
+
 {{% button href="https://getgrav.org/" icon="fas fa-download" %}}Get Grav with icon{{% /button %}}
 
 {{% notice note %}}
@@ -127,3 +129,4 @@ class BookList extends Component {
 
 export default withStyles(styles)(BookList)
 {{< / highlight >}}
+
