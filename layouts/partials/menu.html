@@ -93,6 +93,7 @@
 
 <!-- templates -->
 {{ define "section-tree-nav" }}
+{{ $excludedChapterItems := (slice "/about-us/") }}
 {{ $showvisitedlinks := .showvisitedlinks }}
 {{ $currentNode := .currentnode }}
 {{ $currentFileUniqueID := "" }}
@@ -100,6 +101,7 @@
  {{with .sect}}
   {{if and .IsSection ((not .Params.hidden) or $.showhidden)}}
     {{safeHTML .Params.head}}
+    {{ if not (in $excludedChapterItems .RelPermalink) }}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{ if eq .File.UniqueID $currentFileUniqueID }}active{{end}}
@@ -138,6 +140,7 @@
         </ul>
       {{ end }}
     </li>
+    {{ end }}
   {{else}}
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
