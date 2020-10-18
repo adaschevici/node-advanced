@@ -1,11 +1,11 @@
-baseURL = "http://localhost:8000/"
+baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Workshop Website"
 theme = "learn"
 
 [markup]
   [markup.highlight]
-    style = "monokai"
+    style = "paraiso-dark"
 
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
@@ -36,22 +36,18 @@ theme = "learn"
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green", "orange".
-  themeVariant = "orange"
-  logotype = "node"
-  githublink = "https://github.com/adaschevici/torque"
-  githubalias = "adaschevici/torque"
+  logotype = "react"
+  githublink = "https://github.com/adaschevici/react-advanced"
+  githubalias = "adaschevici/react-advanced"
+
+[blackfriday]
+extensions = ["hardLineBreak"]
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
-url = "https://github.com/adaschevici/torque"
+url = "https://github.com/adaschevici/react-advanced"
 weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-bullhorn'></i> Credits"
