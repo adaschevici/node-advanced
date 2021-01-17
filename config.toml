@@ -36,9 +36,9 @@ theme = "learn"
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green", "orange".
-  logotype = "react-native"
-  githublink = "https://github.com/adaschevici/react-advanced"
-  githubalias = "adaschevici/react-advanced"
+  logotype = "node"
+  githublink = "https://github.com/adaschevici/node-advanced"
+  githubalias = "adaschevici/node-advanced"
 
 [blackfriday]
 extensions = ["hardLineBreak"]
