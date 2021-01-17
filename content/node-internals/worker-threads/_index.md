@@ -14,7 +14,7 @@ const worker = require('worker_threads');
 ```
 {{% notice note %}}
 Workers (threads) are useful for performing CPU-intensive JavaScript operations. They do not help much with I/O-intensive work. The Node.js built-in asynchronous I/O operations are more efficient than Workers can be.
-{{% notice note %}}
+{{% /notice %}}
 
 https://www.nearform.com/blog/workers-in-node-js-how-to-write-a-sudoku-solving-server/
 
