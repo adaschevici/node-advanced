@@ -46,7 +46,7 @@ extensions = ["hardLineBreak"]
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
-url = "https://github.com/adaschevici/react-advanced"
+url = "https://github.com/adaschevici/node-advanced"
 weight = 10
 
 [[menu.shortcuts]]
