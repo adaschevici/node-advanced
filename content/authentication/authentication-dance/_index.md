@@ -37,10 +37,15 @@ token that allows you to secure your services. It is composed of 2 parts, the pa
 ## Other concepts in the JWT lingo
 
 - __JOSE__ : JS standard object encryption, this is a common standard and it does not refer to an implementation but
-  rather a set of practices around JWT
+  rather a set of practices around JWT. This sometimes is refered to as __JOSE__ headers.
 - __JWE__ : is a __JWT__ that is signed and encrypted using a __JWK__, therefore the set of claims is encrypted and
   opaque to the client, it can be decoded and checked on the API
 - __JWS__: is the classic __JWT__ that is commonly called __JWT__ even if it isn't technically that. It is the signed version of the token. It's tamper
   proof because the payload is signed cryptographically and if you were to tamper with it it would fail verification on
   the api side. The payload is `base64` encoded and can be decoded easily on the client side or using tools such as
   [Auth0s JWT inspector](https://jwt.io/#debugger-io)
+
+This authentication type strikes a balanced approach between security and ease of implementation. The stateless token
+makes it a logical choice in distributed systems. It makes sense when you are only protecting you API and once you find
+that you wish to grant third party services access you can start about thinking of Oauth2 as well. They are not mutually
+exclusive.
