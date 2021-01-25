@@ -114,11 +114,20 @@ static int uv__loop_alive(const uv_loop_t* loop) {
 Timers:
 setTimeout() setInterval() setImmediate()
 https://blog.insiderattack.net/timers-immediates-and-process-nexttick-nodejs-event-loop-part-2-2c53fd511bb3
+rate limits: https://github.com/freeCodeCamp/freeCodeCamp/blob/c8f6d156887c68a3301879ed7a9a9937edac1bc1/tools/contributor/lib/utils/rate-limiter.js
+
+Connection issues:
+https://github.com/freeCodeCamp/freeCodeCamp/blob/d23feadc1f000fdeb8d3ef994157bfeef8d233be/api-server/production-start.js
 
 process.nextTick
+https://howtonode.org/understanding-process-next-tick
+freecodecamp userdata
+
 promises
 https://blog.insiderattack.net/promises-next-ticks-and-immediates-nodejs-event-loop-part-3-9226cbe7a6aa
 async/await?
+
+why do yo care? q or bluebird promises
 
 //TODO
 
