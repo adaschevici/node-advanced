@@ -109,6 +109,66 @@ static int uv__loop_alive(const uv_loop_t* loop) {
 
 ### Timers, Promises, Next Ticks
 
+{{< lazy-image image="eventloop.png" lightbox=true />}}
+
+```javascript
+const fs = require("fs");
+
+function parseImportedData(err, data) {
+  const booksData = JSON.parse(data);
+  console.log(JSON.stringify(booksData.meta[0]));
+}
+
+function immediately() {
+  console.log("Hello from setImmediate");
+}
+function delayHello() {
+  console.log("Hello from setTimeout");
+}
+function delayHelloWithPromise() {
+  console.log("Hello from setTimeout");
+  Promise.resolve().then(handlePromise);
+}
+
+function blockFor500MS() {
+  const start = Date.now();
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(Date.now() - start);
+}
+
+function handlePromise() {
+  console.log("promise 1 resolved");
+}
+
+function handlePromiseWithNextTick() {
+  console.log("promise 2 resolved");
+  process.nextTick(() =>
+    console.log("next tick inside promise resolve handler")
+  );
+}
+
+function handleNextTick() {
+  console.log("Hello from nextTick");
+}
+
+setTimeout(delayHello, 0);
+fs.readFile("./data.json", parseImportedData);
+blockFor500MS();
+console.log("hi!");
+setTimeout(delayHello, 0);
+setTimeout(delayHelloWithPromise, 0);
+setTimeout(delayHello, 0);
+setTimeout(delayHello, 0);
+
+setTimeout(delayHello, 0);
+setImmediate(immediately);
+
+process.nextTick(handleNextTick);
+Promise.resolve().then(handlePromise);
+
+Promise.resolve().then(handlePromiseWithNextTick);
+```
+
 1. Execution order
 
 Timers:
