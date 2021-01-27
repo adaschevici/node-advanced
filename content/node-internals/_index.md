@@ -102,4 +102,4 @@ The master awesome list (awesome-node.js)[https://github.com/sindresorhus/awesom
 
 ## Use cases
 
-//TODO
+Open ended discussion :)
