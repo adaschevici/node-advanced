@@ -17,5 +17,6 @@ weight = 5
 ## Workout
 
 1. Add unittests for registration so that login is no longer failing if user is not hard coded
-2. Dockerize api and load the connection strings as secrets or environment variables
-3. Create a postman collection for documenting endpoints
+2. Create a mock client for redis and refactor connection code so that it can be used
+3. Dockerize api and load the connection strings as secrets or environment variables
+4. Create a postman collection for documenting endpoints
