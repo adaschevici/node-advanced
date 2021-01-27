@@ -102,4 +102,32 @@ The master awesome list (awesome-node.js)[https://github.com/sindresorhus/awesom
 
 ## Use cases
 
+{{< lazy-image image="atwoods-law.png" lightbox=true />}}
+
+Tim Berners-Lee on the [Principle of Least Power](https://www.w3.org/DesignIssues/Principles.html):
+
+Computer Science spent the last forty years making languages which were as powerful as possible. Nowadays we have to appreciate the reasons for picking not the most powerful solution but the least powerful. The less powerful the language, the more you can do with the data stored in that language. If you write it in a simple declarative from, anyone can write a program to analyze it. If, for example, a web page with weather data has RDF describing that data, a user can retrieve it as a table, perhaps average it, plot it, deduce things from it in combination with other information. At the other end of the scale is the weather information portrayed by the cunning Java applet. While this might allow a very cool user interface, it cannot be analyzed at all. The search engine finding the page will have no idea of what the data is or what it is about. The only way to find out what a Java applet means is to set it running in front of a person.
+
+{{< lazy-image image="most-loved-tech.png" lightbox=true />}}
+[Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers)
+
+{{< lazy-image image="octoverse.png" lightbox=true />}}
+[Top languages over the years](https://octoverse.github.com/)
+
+### Web Applications
+
+- Web APIs: used by LinkedIn, Netflix
+- Server Side Rendering
+- Real-time Apps: Trello, Notion.so
+
+### Desktop Applications using Electron
+
+- Code Editors: VS Code
+- Collaboration tools: Teams, Slack
+- Figma, Twitch
+
+### Machine Learning
+
+- Tensorflow.js, Brain.js
+
 Open ended discussion :)
