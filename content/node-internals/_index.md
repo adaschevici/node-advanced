@@ -1,6 +1,5 @@
 +++
 title= "Node Overview"
-chapter = true
 date= 2021-01-16T15:03:41+01:00
 draft= false
 pre = "<b>1. </b>"

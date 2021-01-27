@@ -125,9 +125,10 @@ function immediately() {
 function delayHello() {
   console.log("Hello from setTimeout");
 }
-function delayHelloWithPromise() {
-  console.log("Hello from setTimeout");
-  Promise.resolve().then(handlePromise);
+function rateLimiter(delay = 1500) {
+  /* The 1500 delay will guarantee the script will not exceed Github request
+      limit of 1500 per hour. Only increase if you have a higher rate limit */
+  return new Promise((resolve) => setTimeout(() => resolve(true), delay));
 }
 
 function blockFor500MS() {
@@ -156,7 +157,7 @@ fs.readFile("./data.json", parseImportedData);
 blockFor500MS();
 console.log("hi!");
 setTimeout(delayHello, 0);
-setTimeout(delayHelloWithPromise, 0);
+rateLimiter.then(handlePromise);
 setTimeout(delayHello, 0);
 setTimeout(delayHello, 0);
 
@@ -169,36 +170,6 @@ Promise.resolve().then(handlePromise);
 Promise.resolve().then(handlePromiseWithNextTick);
 ```
 
-1. Execution order
-
-Timers:
-setTimeout() setInterval() setImmediate()
-https://blog.insiderattack.net/timers-immediates-and-process-nexttick-nodejs-event-loop-part-2-2c53fd511bb3
-rate limits: https://github.com/freeCodeCamp/freeCodeCamp/blob/c8f6d156887c68a3301879ed7a9a9937edac1bc1/tools/contributor/lib/utils/rate-limiter.js
-
-Connection issues:
-https://github.com/freeCodeCamp/freeCodeCamp/blob/d23feadc1f000fdeb8d3ef994157bfeef8d233be/api-server/production-start.js
-
-process.nextTick
-https://howtonode.org/understanding-process-next-tick
-freecodecamp userdata
-
-promises
-https://blog.insiderattack.net/promises-next-ticks-and-immediates-nodejs-event-loop-part-3-9226cbe7a6aa
-async/await?
-
-why do yo care? q or bluebird promises
-
-//TODO
-
-livecoding example including setTimeout, setImmediate, promises
-
-Discussion about output
-
-1.
-
-## I/O
-
 ## Thread Pool
 
 http://docs.libuv.org/en/v1.x/threadpool.html#threadpool
@@ -209,11 +180,33 @@ Its default size is 4, but it can be changed at startup time by setting the UV_T
 
 UV_THREADPOOL_SIZE
 
-//TODO
+```javascript
+const crypto = require("crypto");
+const NUM_REQUESTS = 2;
 
-livecoding example showing example of running crypto 2/4/6 times; benchmark using apache benchmark
+const start = Date.now();
+for (let i = 0; i < NUM_REQUESTS; i++) {
+  crypto.pbkdf2Sync("secret", "salt", 10000, 512, "sha512");
+  console.log(`${i}: ${Date.now() - start}`);
+}
+```
 
-livecoding example showing example of http requests; benchmark using autocannon
+```javascript
+const https = require("https");
+const NUM_REQUESTS = 8;
+
+const start = Date.now();
+for (let i = 0; i < NUM_REQUESTS; i++) {
+  https
+    .request("https://www.google.com", (res) => {
+      res.on("data", () => {});
+      res.on("end", () => {
+        console.log(`${i} end: ${Date.now() - start}`);
+      });
+    })
+    .end();
+}
+```
 
 Discussion about cpu intensive operations vs I/O operations
 
