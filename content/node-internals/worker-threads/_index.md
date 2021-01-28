@@ -37,6 +37,8 @@ The `worker_threads` module enables the use of threads that execute JavaScript i
 
 In Node.js, each worker will have its own instance of V8 and Event Loop. However, unlike child processes, Workers can share memory.
 
+{{< lazy-image image="worker_threads.png" lightbox=true />}}
+
 ```javascript
 const worker = require("worker_threads");
 ```
