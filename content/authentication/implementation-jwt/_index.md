@@ -43,7 +43,7 @@ We have a registration in place but no login so we want to actually implement th
 We will split the functionality between routes and controllers. This is not a standard MVC architecture and in `nodejs`
 the way to implement features is to focus in keeping everything very simple.
 
-We have the register function in `controllers/user.js`. We will add a login method in the same file that will handle
+We have the register function in `services/user.js`. We will add a login method in the same file that will handle
 generating the token and signing it.
 
 First we want to grab the data from the request and pass it onto the controller login method. A few things to notice
@@ -81,7 +81,7 @@ jsonwebtoken library and send it back to the client. We also want to pass in a p
 should not contain any sensitive data.
 
 ```js
-// controllers/user.js
+// services/user.js
 ...
 const secret = process.env.JWT_SECRET;
 ...
