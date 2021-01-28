@@ -100,6 +100,10 @@ Node.js is so awesome that we have an awesome-awesome list for it! [awesome-awes
 
 The master awesome list (awesome-node.js)[https://github.com/sindresorhus/awesome-nodejs]
 
+[npmcompare](https://npmcompare.com/compare/@hapi/hapi,express,fastify)
+
+{{< lazy-image image="npmcompare.png" lightbox=true />}}
+
 ## Use cases
 
 {{< lazy-image image="atwoods-law.png" lightbox=true />}}
