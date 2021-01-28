@@ -11,7 +11,7 @@ draft = false
 
 ## Secondly, please share your feedback
 
-[Feedback form](https://forms.gle/ucNBGf6KS5DLoB2m8)
+[Feedback form](https://forms.gle/VzQ7vKknnRHPGAcAA)
 
 ## Thirdly, here is a brain dump of my browser bookmarks for any further reference
 
